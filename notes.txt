@@ -1,0 +1,8 @@
+arcjet - for rate limiting and bot protection
+morgan - logs requests with more details(sys info, resposnes status etc)
+cors - to prevent cors errors
+helmet -- sexurity middleware to protect application
+
+
+
+last: 1.21
