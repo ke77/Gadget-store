@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 import productRoutes from './routes/productRoutes.js'
 import { sql } from "./config/db.js";
 import { aj } from "./lib/arcjet.js";
-import e from "express";
+// import e from "express";
 
 dotenv.config()
 
@@ -55,7 +55,7 @@ app.use(async (req, res, next) => {
 })
 
 
-// product data router
+// product data router //or api routes
 app.use('/api/products', productRoutes)
 
 async function initDB() {

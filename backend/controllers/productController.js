@@ -3,7 +3,6 @@ import { sql } from "../config/db.js"
 
 
 // file for CRUD operations
-
 export const getProducts = async (req, res) => {
      try {
           const products = await sql`

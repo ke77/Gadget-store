@@ -1,15 +1,27 @@
-import React from "react"
-import './index.css'
+import Navbar from './components/Navbar';
+import HomePage from './pages/HomePage';
+import { Routes, Route } from 'react-router-dom';
+import ProductPage from './pages/ProductPage';
+import { useThemeStore } from './store/useThemeStore';
+import { Toaster } from 'react-hot-toast';
+
+
 
 function App() {
+  const { theme } = useThemeStore();
+  
 
   return (
-    <>
-      <h1 className="text-3xl font-extrabold">Hello World!!</h1>
-      <h4>Should be smaller</h4>
-      
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure voluptatem odio harum labore sequi numquam eum ad vitae et iste!</p>
-    </>
+    <div className='min-h-screen bg-base-200 transition-colors duration-300' data-theme={theme}>
+      <Navbar />
+
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/products/:id' element={<ProductPage />} />
+      </Routes>
+
+      <Toaster />
+    </div>
   )
 }
 

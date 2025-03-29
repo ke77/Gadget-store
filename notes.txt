@@ -3,6 +3,26 @@ morgan - logs requests with more details(sys info, resposnes status etc)
 cors - to prevent cors errors
 helmet -- sexurity middleware to protect application
 
+status code 429 - rate limiting
+200 - okay
 
 
 last: 1.21
+# ENDPOINT_ID='[endpoint_id]'
+
+
+
+//  zustand:
+     Core Concepts
+     Store:
+     A store is a JavaScript object that holds your state and actions (functions to update the state).
+     You create a store using the create function from Zustand.
+
+     State:
+     The data you want to manage globally (e.g., cart items, user info).
+
+     Actions:
+     Functions that update the state.
+
+     Hooks:
+     Zustand provides a useStore hook to access the state and actions in your components.
