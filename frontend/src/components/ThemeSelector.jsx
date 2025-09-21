@@ -19,7 +19,7 @@ const ThemeSelector = () => {
                     { THEMES.map(themeOption => (
                          <button 
                               key={themeOption.name}
-                              className={`w-full px-4 py-3 rounded-xl flex items-center gap-3 transition-colors 
+                              className={`w-full px-4 py-3 rounded-xl flex items-center gap-3 transition-colors theme-controller 
                                    ${theme === themeOption.name 
                                         ? 'bg-primary/10 text-primary' 
                                         : 'hover:bg-base-content/5'}`}

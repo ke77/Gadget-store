@@ -11,7 +11,7 @@ const Navbar = () => {
 
 
      return (
-          <div className='bg-base-100/80 backdrop-blur-lg border-b border-base-content/10 sticky top-0 z-50'>
+          <div className='bg-base-100/80 backdrop-blur-lg border-base-content/10 sticky top-0 z-50'>
                <div className='max-w-7xl mx-auto'>
                     <div className='navbar px-4 min-h-[4rem] justify-between'>
                          {/* Logo */}
@@ -28,15 +28,15 @@ const Navbar = () => {
 
                          {/* right section */}
                          <div className='flex items-center gap-4'>
-                              <ThemeSelector />
+                              {/* <ThemeSelector /> */}
 
                               { 
                                    isHomePage && (
                                         <div className='indicator'>
-                                             <div className='p-2 rounded-full hover:bg-base-200 transition-colors'>
-                                                  <ShoppingBagIcon className='size-5' />
+                                             <div className='p-2 rounded-full transition-colors'>
+                                                  <ShoppingBagIcon className='size-5 hover:text-gray-400 hover:cursor-pointer' />
                                                   <span className='badge badge-sm badge-primary indicator-item'>
-                                                       8
+                                                       5
                                                   </span>
                                              </div>
                                         </div>
