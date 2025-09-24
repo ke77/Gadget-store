@@ -17,10 +17,10 @@ const PORT = process.env.PORT || 3000
 
 
 // using middleware
-console.table("🚀 ~ middleware:", middleware)
+// console.table("🚀 ~ middleware:", middleware)
 app.use(express.json()) // extracts json data from req.body
-app.use(cors()) // prevent cors errors in the client
 
+// app.use(cors()) // prevent cors errors in the client
 app.use(cors({
      origin: [
           'http://localhost:3000', //local frontend URL
