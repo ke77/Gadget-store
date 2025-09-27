@@ -24,6 +24,7 @@ app.use(express.json()) // extracts json data from req.body
 app.use(cors({
      origin: [
           'http://localhost:3000', //local frontend URL
+          'http://localhost:5173', //local frontend URL
           'https://gadget-store00.vercel.app' //deployed frontend URL
      ],
 }))
