@@ -20,17 +20,27 @@ const PORT = process.env.PORT || 3000
 // console.table("🚀 ~ middleware:", middleware)
 app.use(express.json()) // extracts json data from req.body
 
-// app.use(cors()) // prevent cors errors in the client
+// app.use(cors({
+//      origin: [
+//           'http://localhost:3000', //local frontend URL
+//           'http://localhost:5173', //local frontend URL
+//           'https://gadget-store00.vercel.app' //deployed frontend URL
+//      ],
+// }))
 app.use(cors({
-     origin: [
-          'http://localhost:3000', //local frontend URL
-          'http://localhost:5173', //local frontend URL
-          'https://gadget-store00.vercel.app' //deployed frontend URL
-     ],
+     origin: '*'
 }))
 
 app.use(helmet())
 app.use(morgan('dev')) // logs requests with more details(sys info, resposnes status etc)
+
+
+
+// test route
+app.get('/health', (req, res) => {
+     res.json({ status: 'OK', message: 'Server is working!' });
+});
+
 
 
 // apply arcjet rate-limit to all routes

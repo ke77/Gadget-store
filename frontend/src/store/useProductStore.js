@@ -4,7 +4,8 @@ import axios from 'axios';
 import { toast } from "react-hot-toast";
 
 
-const BASE_URL = process.env.NODE_ENV ===  'production' ? 'https://gadget-store-production.up.railway.app' : 'http://localhost:3000'
+// const BASE_URL = process.env.NODE_ENV ===  'production' ? 'https://gadget-store-production.up.railway.app' : 'http://localhost:3000'
+const BASE_URL = 'https://gadget-store-production.up.railway.app'
 
 export const useProductStore = create((set, get) => ({
      // products state
