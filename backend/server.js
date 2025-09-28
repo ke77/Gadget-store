@@ -78,6 +78,12 @@ app.use(async (req, res, next) => {
 // product data router //or api routes
 app.use('/api/products', productRoutes)
 
+
+// Add a simple test route to products
+app.get('/api/test', (req, res) => {
+  res.json({ message: 'Test route works!' });
+});
+
 async function initDB() {
      try {
           await sql`
